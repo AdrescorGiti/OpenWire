@@ -1,3 +1,5 @@
+<img width="300" height="300" alt="app-icon" src="https://github.com/user-attachments/assets/43abfc1d-a92e-478d-bc51-c99deff18034" />
+
 # OpenWire RU ReadMe
 
 ### [EN ReadMe](README.md)
