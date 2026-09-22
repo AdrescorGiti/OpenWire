@@ -1,5 +1,7 @@
 # OpenWire EN ReadMe
 
+### [RU ReadMe](AdrescorGiti/OpenWire/blob/main/README-RU.md)
+
 > A native Linux soundpad and real-time audio effects processor for PipeWire.
 
 OpenWire helps you trigger sound effects quickly, process microphone audio, and
