@@ -1,0 +1,33 @@
+[package]
+name = "openwire"
+version = "0.1.0"
+description = "OpenWire — native soundpad and real-time audio effects processor for Linux (PipeWire + Tauri v2)"
+edition = "2021"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "custom-protocol"] }
+tauri-plugin-opener = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+anyhow = "1"
+thiserror = "2"
+
+pipewire = "0.10"
+libspa = "0.10"
+
+symphonia = { version = "0.5", features = ["mp3", "wav", "flac", "ogg", "vorbis", "aac", "pcm"] }
+ringbuf = "0.4"
+rustfft = "6"
+
+dirs = "6"
+rdev = "0.5"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"
