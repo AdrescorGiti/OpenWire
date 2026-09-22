@@ -1,4 +1,4 @@
-# OpenWire
+# OpenWire EN ReadMe
 
 > A native Linux soundpad and real-time audio effects processor for PipeWire.
 
