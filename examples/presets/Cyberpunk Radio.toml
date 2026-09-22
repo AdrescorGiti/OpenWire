@@ -1,0 +1,28 @@
+[meta]
+name = "Cyberpunk Radio"
+description = "Голос диспетчера с перегрузом и полосовым срезом"
+author = "OpenWire"
+version = 1
+
+[dsp.pitch]
+enabled = true
+semitones = -3.5
+formant_shift = 0.85
+
+[dsp.equalizer]
+low_shelf_gain_db = -6.0
+mid_freq_hz = 1200.0
+mid_gain_db = 4.5
+mid_q = 1.8
+high_shelf_gain_db = -8.0
+
+[dsp.radio_fx]
+enabled = true
+bandpass_low_hz = 380.0
+bandpass_high_hz = 3600.0
+drive_saturation = 0.35
+noise_floor_db = -48.0
+
+[routing]
+ducking_attenuation_db = -14.0
+sidechain_release_ms = 120.0
