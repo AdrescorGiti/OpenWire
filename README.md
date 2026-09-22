@@ -1,6 +1,6 @@
 # OpenWire EN ReadMe
 
-### [RU ReadMe](AdrescorGiti/OpenWire/blob/main/README-RU.md)
+### [RU ReadMe](AdrescorGiti/OpenWire/README-RU.md)
 
 > A native Linux soundpad and real-time audio effects processor for PipeWire.
 
