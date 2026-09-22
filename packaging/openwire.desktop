@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=OpenWire
+Comment=Native soundpad and real-time audio effects processor
+Comment[ru]=Нативный саундпад и процессор эффектов
+Exec=openwire
+Icon=openwire
+Type=Application
+Categories=AudioVideo;Audio;Mixer;
+Keywords=soundpad;audio;pipewire;voice;
+StartupWMClass=openwire
+Terminal=false

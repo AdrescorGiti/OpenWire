@@ -1,0 +1,42 @@
+# Maintainer: OpenWire Contributors <dev@openwire.local>
+#
+# Binary PKGBUILD: packages the already-built release binary from
+# ../src-tauri/target/release/openwire. No nested tarballs, no rebuild
+# inside makepkg. Run ./build.sh (which compiles + packages) instead.
+
+pkgname=openwire
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Native soundpad and real-time audio effects processor for Linux (PipeWire + Tauri v2)"
+arch=('x86_64')
+url="https://github.com/openwire/openwire"
+license=('MIT')
+depends=(
+  'webkit2gtk-4.1'
+  'libpipewire'
+  'libappindicator'
+)
+source=()
+sha256sums=()
+install=openwire.install
+
+package() {
+  local root="$startdir/../src-tauri"
+  local bin="$root/target/release/$pkgname"
+  local icons="$root/icons"
+
+  if [[ ! -x "$bin" ]]; then
+    error "Release binary not found: $bin"
+    error "Run ./build.sh from the packaging directory to compile and package."
+    return 1
+  fi
+
+  install -Dm755 "$bin" "$pkgdir/usr/bin/$pkgname"
+
+  install -Dm644 "$startdir/openwire.desktop" \
+    "$pkgdir/usr/share/applications/$pkgname.desktop"
+
+  install -Dm644 "$icons/128x128.png"    "$pkgdir/usr/share/icons/hicolor/128x128/apps/$pkgname.png"
+  install -Dm644 "$icons/32x32.png"      "$pkgdir/usr/share/icons/hicolor/32x32/apps/$pkgname.png"
+  install -Dm644 "$icons/128x128@2x.png" "$pkgdir/usr/share/icons/hicolor/256x256/apps/$pkgname.png"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!--
+    OpenWire — industrial monogram "O" + oscillogram "W".
+    Grid: 512x512, center (256,256).
+    Ring: r=212, stroke=44  → outer 490px, inner 380px.
+    Wave: stroke=40. Both strokes are multiples of 4 and share the same
+    grid quantum, so ring weight and wave ticks are mathematically matched.
+    Teeth (256±64, 412) rest inside the inner lower arc (|v| = √(64²+156²) ≈ 168.5;
+    168.5 + stroke/2 = 188.5 ≈ inner radius 190 → stroke edge kisses the arc).
+    Center peak (256,116) rises toward the top inner point with a sharp miter.
+    Horizontal leads enter exactly on the Y=256 axis from the inner ring edge.
+  -->
+  <circle cx="256" cy="256" r="212"
+          fill="none" stroke="#F4772E" stroke-width="44"/>
+  <path d="M 66 256
+           L 136 256
+           L 192 412
+           L 256 116
+           L 320 412
+           L 376 256
+           L 446 256"
+        fill="none"
+        stroke="#F4772E"
+        stroke-width="40"
+        stroke-linejoin="miter"
+        stroke-miterlimit="20"
+        stroke-linecap="butt"/>
+</svg>

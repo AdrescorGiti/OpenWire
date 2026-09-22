@@ -1,0 +1,18 @@
+{
+  "name": "openwire-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i src/css/app.css -o ui/app.css --minify",
+    "build:copy": "node scripts/copy-assets.mjs",
+    "build": "npm run build:copy && npm run build:css",
+    "dev:css": "tailwindcss -i src/css/app.css -o ui/app.css --watch",
+    "dev": "npm run build:copy && npm run dev:css",
+    "test": "node tests/boot-smoke.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

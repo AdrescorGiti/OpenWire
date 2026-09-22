@@ -1,0 +1,9 @@
+post_install() {
+  echo ""
+  echo "  OpenWire installed."
+  echo "  Requires a running PipeWire session for audio routing."
+  echo ""
+}
+post_upgrade() {
+  post_install
+}
